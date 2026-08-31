@@ -4,24 +4,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>老y像素工坊 · PIXEL STUDIO</title>
-  <meta name="description" content="把照片炼成会呼吸的像素 GIF。拖入照片，浏览器里就能炼。" />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500&family=Noto+Serif+SC:wght@500;600&display=swap" rel="stylesheet" />
   <style>
     :root { --bg:#07080c; --ink:#f4f0e8; --muted:#9aa0ad; --gold:#ead9ad; --line:rgba(234,217,173,.45); }
     * { box-sizing:border-box; margin:0; padding:0; }
-    html, body { background:var(--bg); color:var(--ink); }
+    html,body { background:var(--bg); color:var(--ink); }
     body { min-height:100dvh; font-family:"Noto Sans SC","PingFang SC",sans-serif; font-weight:300; display:flex; justify-content:center; }
     .sheet { width:min(420px,100%); min-height:100dvh; padding:36px 22px 28px; display:flex; flex-direction:column; align-items:center; text-align:center; }
     .brand { font-family:"Noto Serif SC",serif; font-size:clamp(28px,8vw,34px); font-weight:500; letter-spacing:.08em; }
     .en { margin-top:8px; font-size:11px; letter-spacing:.42em; color:#c8c3b8; text-indent:.42em; }
     .rule { width:28px; height:1px; background:var(--line); margin:16px 0 22px; border:0; }
-    .art { width:100%; display:block; }
-    .lead { margin-top:26px; font-size:16px; letter-spacing:.04em; font-weight:400; }
-    .feats { margin-top:16px; color:var(--muted); font-size:13.5px; line-height:2; letter-spacing:.04em; }
+    .art { width:min(100%,360px); aspect-ratio:4/5; object-fit:cover; object-position:center 62%; display:block; }
+    .lead { margin-top:26px; font-size:16px; letter-spacing:.04em; }
+    .feats { margin-top:16px; color:var(--muted); font-size:13.5px; line-height:2; }
     .cta { margin-top:26px; display:inline-flex; min-width:168px; padding:11px 26px; border:1px solid var(--gold); color:var(--gold); text-decoration:none; font-size:13px; letter-spacing:.28em; text-indent:.28em; }
     .cta:hover { background:var(--gold); color:#16140f; }
-    .privacy { margin-top:28px; max-width:320px; color:#6b7180; font-size:11px; line-height:1.7; }
-    .privacy summary { cursor:pointer; letter-spacing:.18em; list-style:none; color:#8b90a0; }
+    .privacy { margin-top:28px; max-width:320px; color:#6b7180; font-size:11px; }
+    .privacy summary { cursor:pointer; letter-spacing:.18em; list-style:none; }
     .foot { margin-top:auto; padding-top:22px; color:#5c6170; font-size:10px; letter-spacing:.28em; }
   </style>
 </head>
@@ -30,11 +29,11 @@
     <h1 class="brand">老y像素工坊</h1>
     <div class="en">PIXEL STUDIO</div>
     <hr class="rule" />
-    <img class="art" src="https://litter.catbox.moe/8bd6l5.jpg" width="784" height="1168" alt="窗台上的橘猫" />
+    <img class="art" src="https://litter.catbox.moe/m89gli.jpg" width="753" height="941" alt="窗台上的橘猫" />
     <p class="lead">把照片炼成会呼吸的像素 GIF</p>
     <div class="feats">拖入照片，光影轻轻动<br />可下载 GIF 和静帧像素图<br />一次多张，浏览器里就能炼</div>
     <a class="cta" href="https://laoypixel.grok.me/" target="_blank" rel="noopener">进入工坊</a>
-    <details class="privacy"><summary>隐私</summary><p>照片默认在浏览器本地处理，用于生成像素 GIF。不收集相册，不出售个人信息。</p></details>
+    <details class="privacy"><summary>隐私</summary><p>照片默认在浏览器本地处理。</p></details>
     <div class="foot">LAOY PIXEL STUDIO</div>
   </main>
 </body>
