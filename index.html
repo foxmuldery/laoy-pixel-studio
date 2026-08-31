@@ -3,147 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>老 y 像素工坊</title>
-  <meta name="description" content="老 y 像素工坊：把照片炼成复古像素 GIF。功能、特点与隐私政策。" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <title>老y像素工坊</title>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500&family=Noto+Serif+SC:wght@500;600&display=swap" rel="stylesheet" />
   <style>
-    :root {
-      --bg: #080706;
-      --ink: #f2ead8;
-      --muted: #9d8e76;
-      --dim: #6a5f50;
-      --line: rgba(242, 234, 216, 0.12);
-      --gold: #c9a66b;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      background: var(--bg);
-      color: var(--ink);
-      font-family: "Noto Sans SC", "PingFang SC", sans-serif;
-      font-weight: 300;
-      line-height: 1.65;
-    }
-    a { color: inherit; text-decoration: none; }
-    header {
-      position: sticky; top: 0; z-index: 20;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 16px 28px;
-      background: rgba(8, 7, 6, 0.88);
-      border-bottom: 1px solid var(--line);
-      backdrop-filter: blur(8px);
-    }
-    .logo { font-family: "Noto Serif SC", serif; letter-spacing: 0.16em; font-size: 15px; }
-    nav { display: flex; gap: 22px; align-items: center; font-size: 13px; letter-spacing: 0.12em; color: var(--muted); }
-    nav a:hover { color: var(--ink); }
-    .enter { border: 1px solid var(--gold); color: var(--gold); padding: 6px 12px; }
-    .hero {
-      min-height: 58vh;
-      display: grid;
-      grid-template-columns: 1fr 1.15fr;
-      border-bottom: 1px solid var(--line);
-    }
-    .hero-copy { padding: 64px 40px; display: flex; flex-direction: column; justify-content: center; }
-    .hero-copy p.tag { color: var(--gold); font-size: 12px; letter-spacing: 0.22em; margin-bottom: 14px; }
-    h1 {
-      font-family: "Noto Serif SC", serif;
-      font-size: clamp(36px, 5vw, 56px);
-      font-weight: 600; letter-spacing: 0.1em; line-height: 1.15;
-    }
-    .hero-copy .one { margin: 16px 0 28px; color: var(--muted); max-width: 24em; }
-    .hero-visual {
-      background: #000 url("https://laoypixel.grok.me/samples/still-life.jpg") center/cover no-repeat;
-      min-height: 360px;
-    }
-    .btn {
-      display: inline-flex; align-items: center; justify-content: center;
-      padding: 12px 22px; background: var(--gold); color: #1a140c;
-      letter-spacing: 0.16em; font-size: 14px; font-weight: 500; width: fit-content;
-    }
-    .wrap { width: min(920px, calc(100% - 48px)); margin: 0 auto; padding: 56px 0; }
-    h2 { font-family: "Noto Serif SC", serif; font-size: 22px; letter-spacing: 0.14em; margin-bottom: 22px; font-weight: 600; }
-    section { border-bottom: 1px solid var(--line); }
-    ul.plain { list-style: none; }
-    ul.plain li {
-      padding: 14px 0; border-top: 1px solid var(--line);
-      display: grid; grid-template-columns: 88px 1fr; gap: 16px; font-size: 15px;
-    }
-    ul.plain b { color: var(--gold); font-weight: 400; letter-spacing: 0.08em; }
-    ul.plain span { color: var(--muted); }
-    .privacy p { color: var(--muted); margin-bottom: 12px; font-size: 14px; }
-    .privacy h3 { font-size: 14px; letter-spacing: 0.08em; margin: 20px 0 8px; font-weight: 500; }
-    footer {
-      padding: 20px 28px 36px; color: var(--dim); font-size: 12px; letter-spacing: 0.1em;
-      display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap;
-    }
-    @media (max-width: 800px) {
-      nav a:not(.enter) { display: none; }
-      .hero { grid-template-columns: 1fr; }
-      .hero-copy { padding: 40px 24px; }
-      ul.plain li { grid-template-columns: 1fr; gap: 4px; }
-    }
+    :root { --bg:#07080c; --ink:#f3efe8; --muted:#8b90a0; --gold:#ead9ad; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { min-height:100vh; background:var(--bg); color:var(--ink); font-family:"Noto Sans SC",sans-serif; font-weight:300; display:flex; flex-direction:column; align-items:center; }
+    header { width:min(420px, calc(100% - 32px)); padding:22px 0 8px; display:flex; justify-content:flex-end; }
+    .enter { border:1px solid var(--gold); color:var(--gold); padding:7px 14px; font-size:12px; letter-spacing:.16em; text-decoration:none; }
+    main { width:min(420px, calc(100% - 32px)); display:flex; flex-direction:column; align-items:center; padding-bottom:36px; }
+    .poster { width:100%; border-radius:4px; display:block; }
+    .btn { margin-top:22px; display:inline-flex; padding:12px 28px; background:var(--gold); color:#16140f; letter-spacing:.18em; font-size:13px; font-weight:500; text-decoration:none; }
+    .privacy { width:min(420px, calc(100% - 32px)); padding:8px 0 36px; color:var(--muted); font-size:12px; line-height:1.7; text-align:center; }
+    .privacy h2 { font-family:"Noto Serif SC",serif; font-size:14px; letter-spacing:.16em; color:var(--ink); margin-bottom:10px; }
+    footer { padding-bottom:28px; color:#5c6170; font-size:10px; letter-spacing:.2em; }
   </style>
 </head>
 <body>
-  <header>
-    <a class="logo" href="#top">老 y 像素工坊</a>
-    <nav>
-      <a href="#features">功能</a>
-      <a href="#traits">特点</a>
-      <a href="#privacy">隐私</a>
-      <a class="enter" href="https://laoypixel.grok.me/" target="_blank" rel="noopener">进入工坊</a>
-    </nav>
-  </header>
-  <section class="hero" id="top">
-    <div class="hero-copy">
-      <p class="tag">PIXEL STUDIO</p>
-      <h1>老 y 像素工坊</h1>
-      <p class="one">把照片拖进来，炼成高对比复古像素 GIF。本页只作说明，创作请进入工坊。</p>
-      <a class="btn" href="https://laoypixel.grok.me/" target="_blank" rel="noopener">进入工坊</a>
-    </div>
-    <div class="hero-visual" role="img" aria-label="窗边静物"></div>
+  <header><a class="enter" href="https://laoypixel.grok.me/" target="_blank" rel="noopener">进入工坊</a></header>
+  <main>
+    <img class="poster" src="poster.jpg" alt="老y像素工坊" />
+    <a class="btn" href="https://laoypixel.grok.me/" target="_blank" rel="noopener">进入工坊</a>
+  </main>
+  <section class="privacy" id="privacy">
+    <h2>隐私政策</h2>
+    <p>照片默认在浏览器本地处理，用于生成像素 GIF。不收集相册，不出售个人信息。</p>
+    <p>关闭页面后，未导出的内容不会保存。</p>
   </section>
-  <section id="features">
-    <div class="wrap">
-      <h2>功能</h2>
-      <ul class="plain">
-        <li><b>导入</b><span>拖入或选择 JPG / PNG / WEBP，也可从样片开始。</span></li>
-        <li><b>像素化</b><span>调节像素粒度、色板、光影运动、反差与抖动。</span></li>
-        <li><b>导出</b><span>输出 GIF 或像素图，一次可放入多张。</span></li>
-      </ul>
-    </div>
-  </section>
-  <section id="traits">
-    <div class="wrap">
-      <h2>特点</h2>
-      <ul class="plain">
-        <li><b>暗房</b><span>默认低饱和暗调，光会走、影会呼吸。</span></li>
-        <li><b>色板</b><span>自适应、电影光、黑白、月光、街灯等现成母版。</span></li>
-        <li><b>本地</b><span>在浏览器里处理，不强制登录。</span></li>
-      </ul>
-    </div>
-  </section>
-  <section id="privacy">
-    <div class="wrap privacy">
-      <h2>隐私政策</h2>
-      <p>本政策适用于「老 y 像素工坊」介绍页与工具（含 laoypixel.grok.me）。使用即表示你了解下述说明。</p>
-      <h3>收集的信息</h3>
-      <p>你放入的照片默认在浏览器本地处理，用于生成像素图与 GIF。本介绍页不收集账号或相册。</p>
-      <h3>使用方式</h3>
-      <p>素材只用于完成你发起的转换。不会出售照片或个人信息。</p>
-      <h3>保存与删除</h3>
-      <p>关闭页面后，未主动导出的内容不会作为账号资产保存。导出文件由你自行保管。</p>
-      <h3>第三方</h3>
-      <p>页面托管与字体加载可能经过 GitHub Pages、Google Fonts 等服务。这些服务仅传输打开页面所必需的数据。</p>
-      <h3>联系</h3>
-      <p>隐私相关请求可通过运营账号联系。政策如有更新，将在本页公示。</p>
-    </div>
-  </section>
-  <footer>
-    <span>老 y 像素工坊</span>
-    <span>导航页 · 工具在 laoypixel.grok.me</span>
-  </footer>
+  <footer>LAOY PIXEL STUDIO</footer>
 </body>
 </html>
